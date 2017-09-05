@@ -1,0 +1,37 @@
+{
+  "name": "redux-persist-nextjs",
+  "version": "0.1.0",
+  "description": "Redux persistor for Next.js",
+  "main": "src/index.js",
+  "dependencies": {
+    "cookie": "^0.3.1",
+    "eslint": "^4.6.1",
+    "js-cookie": "^2.1.4"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramiel/redux-persist-nextjs.git"
+  },
+  "keywords": [
+    "redux",
+    "persist",
+    "cookie",
+    "storage"
+  ],
+  "author": "Fabrizio Ruggeri",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ramiel/redux-persist-nextjs/issues"
+  },
+  "homepage": "https://github.com/ramiel/redux-persist-nextjs#readme"
+}
