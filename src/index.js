@@ -1,4 +1,4 @@
-const Cookies = require('js-cookies')
+const Cookies = require('js-cookie')
 const SSParser = require('cookie')
 
 class NextStorage {
@@ -10,12 +10,12 @@ class NextStorage {
     if (ctx.req) {
       // server
       const cookies = ctx.req.headers.cookie
-      if (!cookies) return {}
-      this.cookies = SSParser.parse(cookies)
+      this.cookies = cookies ? SSParser.parse(cookies) : {}
     } else {
       // browser
       this.cookies = Cookies.getJSON()
     }
+    this.cookies = {}
   }
 
   getItem (key, cb) {
@@ -38,10 +38,11 @@ class NextStorage {
     } else {
       Cookies.remove(key)
     }
+    cb(null)
   }
 
   getAllKeys (cb) {
-    cb(this.cookies)
+    cb(null, Object.keys(this.cookies))
   }
 }
 
